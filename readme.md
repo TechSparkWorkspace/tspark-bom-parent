@@ -17,20 +17,20 @@ Before you start, ensure you have the following installed:
 To clone the repository, run the following command:
 
 ```
-git clone https://github.com/TechSparkWorkspace/tspark_bom_parent.git
+git clone https://github.com/TechSparkWorkspace/tspark-bom-parent.git
 ```
 
 Navigate to the project directory:
 
 ```shell
-cd tspark_bom_parent
+cd tspark-bom-parent
 ```
 
 ## Building the Project
 
 Build the project using the Gradle Wrapper to ensure the correct Gradle version is used:
 
-```
+```shell
 ./gradlew build
 ```
 

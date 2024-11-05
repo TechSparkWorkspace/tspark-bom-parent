@@ -1,5 +1,6 @@
 plugins {
     id 'java-platform'
+    id 'maven-publish'
 }
 
 group = 'org.techspark'
@@ -20,18 +21,20 @@ dependencies {
 
 publishing {
     publications {
-        mavenJava(MavenPublication) {
-            pom {
-                name = 'TechSpark Platform BOM'
-                description = 'A Bill of Materials for TechSpark microservices.'
-                url = 'https://techspark.hyppar.org/'
+        mavenJava(MavenPublication)
 
-                scm {
-                    connection = 'git@github.com:TechSparkWorkspace/tspark_bom_parent.git'
-                }
-
-            }
-        }
+//        mavenJava(MavenPublication) {
+//            pom {
+//                name = 'TechSpark Platform BOM'
+//                description = 'A Bill of Materials for TechSpark microservices.'
+//                url = 'https://techspark.hyppar.org/'
+//
+//                scm {
+//                    connection = 'git@github.com:TechSparkWorkspace/tspark-bom-parent.git'
+//                }
+//
+//            }
+//        }
     }
     repositories {
         mavenLocal()
