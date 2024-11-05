@@ -1,0 +1,48 @@
+plugins {
+    id 'java-platform'
+}
+
+group = 'org.techspark'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    constraints {
+        api 'org.springframework.boot:spring-boot-starter-web:3.3.3'
+        api 'org.springframework.boot:spring-boot-starter-data-jpa:3.3.3'
+
+        api 'org.projectlombok:lombok:1.18.24'
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            pom {
+                name = 'TechSpark Platform BOM'
+                description = 'A Bill of Materials for TechSpark microservices.'
+                url = 'https://techspark.hyppar.org/'
+
+                scm {
+                    connection = 'git@github.com:TechSparkWorkspace/tspark_bom_parent.git'
+                }
+
+            }
+        }
+    }
+    repositories {
+        mavenLocal()
+        // Uncomment and configure to publish to a remote repository
+        // maven {
+        //     name = 'MyCompanyRepo'
+        //     url = 'https://your-maven-repo'
+        //     credentials {
+        //         username = 'your-username'
+        //         password = 'your-password'
+        //     }
+        // }
+    }
+}
